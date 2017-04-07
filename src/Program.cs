@@ -10,6 +10,9 @@ namespace HSPackParser
         {
             Parser p = new Parser();
             p.Parse(FILE_NAME);
+
+            Querier q = new Querier(p.Packs);
+            q.Run();
         }
     }
 }
