@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace HSPackParser.Data
@@ -33,7 +34,9 @@ namespace HSPackParser.Data
             var sorted = cardCount.OrderBy(kp => kp.Key).ToList();
             foreach (var kvp in sorted)
             {
-                Console.WriteLine(string.Format("{0} {1}", kvp.Key, kvp.Value));
+                string output = string.Format("{0} {1}{2}", kvp.Key, kvp.Value, Environment.NewLine);
+                Console.Write(output);
+                File.AppendAllText("out.txt", output);
             }
         }
 
