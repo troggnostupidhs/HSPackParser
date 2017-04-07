@@ -1,12 +1,15 @@
-﻿using System;
+﻿using HSPackParser.Data;
 
 namespace HSPackParser
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public const string FILE_NAME = "31YYEWQ.txt";
+
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Parser p = new Parser();
+            p.Parse(FILE_NAME);
         }
     }
 }
