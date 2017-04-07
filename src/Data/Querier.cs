@@ -30,7 +30,7 @@ namespace HSPackParser.Data
                 cardCount[key] = currentCount;
             }
 
-            var sorted = cardCount.OrderByDescending(kp => kp.Key).ToList();
+            var sorted = cardCount.OrderBy(kp => kp.Key).ToList();
             foreach (var kvp in sorted)
             {
                 Console.WriteLine(string.Format("{0} {1}", kvp.Key, kvp.Value));
