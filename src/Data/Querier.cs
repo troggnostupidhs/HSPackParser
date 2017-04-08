@@ -13,11 +13,12 @@ namespace HSPackParser.Data
         public Querier(List<Pack> packs)
         {
             Packs = packs;
-            AllCards = new List<Card>();
-            foreach (Pack p in Packs)
-            {
-                AllCards.AddRange(p.Cards);
-            }
+            AllCards = packs.Select((p) => p.Cards)
+                            .Aggregate(new List<Card>(), (result, cards) =>
+                            {
+                                result.AddRange(cards); 
+                                return result;
+                            }).ToList();
         }
 
         private void PrintByCardCounts()
