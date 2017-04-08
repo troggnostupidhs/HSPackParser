@@ -1,7 +1,7 @@
+using HSPackParser.Data.Poco;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using HSPackParser.Data.Poco;
 
 namespace HSPackParser.Data.Parsers
 {

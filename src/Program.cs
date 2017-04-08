@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using HSPackParser.Data.Parsers;
+﻿using HSPackParser.Data.Parsers;
 using HSPackParser.Data.Queriers;
 
 namespace HSPackParser
