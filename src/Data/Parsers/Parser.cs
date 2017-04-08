@@ -5,10 +5,19 @@ using System.IO;
 
 namespace HSPackParser.Data.Parsers
 {
+    /// <summary>
+    /// Parses pack info.
+    /// </summary>
     public class Parser
     {
+        /// <summary>
+        /// Packs from parsing.
+        /// </summary>
         public List<Pack> Packs { get; private set; }
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         public Parser()
         {
         }
@@ -56,6 +65,11 @@ namespace HSPackParser.Data.Parsers
             return p;
         }
 
+        /// <summary>
+        /// Use this to parse the pack file.
+        /// </summary>
+        /// <param name="file">file path.</param>
+        /// <returns></returns>
         public List<Pack> Parse(string file)
         {
             Packs = new List<Pack>();

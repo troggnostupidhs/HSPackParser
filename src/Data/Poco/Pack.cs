@@ -2,6 +2,9 @@ using System.Collections.Generic;
 
 namespace HSPackParser.Data.Poco
 {
+    /// <summary>
+    /// Represents a pack.
+    /// </summary>
     public class Pack
     {
         public string Id { get; set; }
