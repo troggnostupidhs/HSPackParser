@@ -1,4 +1,6 @@
-﻿using HSPackParser.Data;
+﻿using System.Collections.Generic;
+using HSPackParser.Data.Parsers;
+using HSPackParser.Data.Queriers;
 
 namespace HSPackParser
 {
@@ -8,6 +10,8 @@ namespace HSPackParser
 
         public static void Main(string[] args)
         {
+            var test = HearthDb.Cards.All[""];
+
             Parser p = new Parser();
             p.Parse(FILE_NAME);
 

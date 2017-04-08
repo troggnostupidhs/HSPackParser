@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="HearthDb">
+      <HintPath>..\dll\HearthDb.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
