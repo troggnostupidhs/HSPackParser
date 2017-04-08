@@ -47,9 +47,11 @@ namespace HSPackParser.Data.Queriers
             var sorted = cardCount.OrderByDescending(kp => kp.Value).GroupBy(kp => kp.Key.Rarity).ToList();
             foreach (var groups in sorted)
             {
-                WriteLine("{0}", groups.Key);
+                var kvps = groups.ToList();
+
+                WriteLine("{0} - {1}", groups.Key, kvps.Count());
                 WriteLine("------------------------------");
-                groups.ToList().ForEach((kvp) =>
+                kvps.ForEach((kvp) =>
                 {
                     WriteLine("{0,25} {1}", kvp.Key.Name, kvp.Value);
                 });
